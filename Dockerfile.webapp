@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Копируем requirements для веб-приложения
+COPY requirements.webapp.txt .
+RUN pip install --no-cache-dir -r requirements.webapp.txt
+
+# Копируем само приложение
+COPY app.py .
+
+# Команда запуска
+CMD ["python", "app.py"]

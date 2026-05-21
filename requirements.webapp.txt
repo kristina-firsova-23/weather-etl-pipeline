@@ -1,0 +1,6 @@
+flask
+plotly
+pandas
+requests
+sqlalchemy
+flask-socketio  # если используете WebSocket
